@@ -62,6 +62,109 @@ CITE::isEligible(ConditionInterface $model): bool;
 ```
 Retourne l'éligibilité du projet à l'aide financière sur la base des informations transmises
 
+## Exemples
+
+```
+<?php
+
+use AideTravaux\CITE\Model\ConditionInterface;
+use AideTravaux\CITE\Model\DataInterface;
+use AideTravaux\CITE\CITE;
+
+class Data implements ConditionInterface, DataInterface
+{
+    public function getCiteCodeTravaux(): string
+    {
+        return 'CITE-ENV-01';
+    }
+
+    public function getCodeRegion(): string
+    {
+        return '11';
+    }
+
+    public function getCompositionMenage(): int
+    {
+        return (int) 1;
+    }
+
+    public function getRessourcesMenage(): float
+    {
+        return (float) 27000;
+    }
+
+    public function getQuotientFamilial(): float
+    {
+        return (float) 1;
+    }
+
+    public function getSituationFamiliale(): string
+    {
+        return 'Marié ou pacsé';
+    }
+
+    public function getNombrePersonnesACharge(): float
+    {
+        return (float) 1;
+    }
+
+    public function getTypePartie(): string
+    {
+        return 'Partie privative';
+    }
+
+    public function getSurfaceIsolant(): float
+    {
+        return (float) 100;
+    }
+
+    public function getSurfaceHabitable(): float
+    {
+        return (float) 1;
+    }
+
+    public function getSurfaceProtegee(): float
+    {
+        return (float) 1;
+    }
+
+    public function getQuotePart(): float
+    {
+        return (float) 1;
+    }
+
+    public function getNombreLogements(): int
+    {
+        return (int) 1;
+    }
+
+    public function getNombreEquipement(): int
+    {
+        return (int) 1;
+    }
+
+    public function getStatutOccupantLogement(): string
+    {
+        return 'Propriétaire occupant';
+    }
+
+    public function getTypeOccupationLogement(): string
+    {
+        return 'Résidence principale';
+    }
+
+    public function getAgeLogement(): int
+    {
+        return 30;
+    }
+}
+
+$data = new Data();
+
+CITE::get($data);
+CITE::resolveConditions($data);
+
+```
 
 ## Base de données
 
