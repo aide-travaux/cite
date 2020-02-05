@@ -1,6 +1,6 @@
 {
-    "name": "adrien-rosi/cite",
-    "description": "Aide Financiè0re - Crédit d'impôt pour la transition énergétique",
+    "name": "aide-travaux/cite",
+    "description": "Aide travaux - Crédit d'impôt transition énergétique",
     "type": "library",
     "license": "MIT",
     "authors": [
