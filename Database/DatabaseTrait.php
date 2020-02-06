@@ -4,7 +4,7 @@ namespace AideTravaux\CITE\Database;
 
 use AideTravaux\CITE\Model\DataInterface;
 
-trait DBTrait
+trait DatabaseTrait
 {
     /**
      * @inheritdoc

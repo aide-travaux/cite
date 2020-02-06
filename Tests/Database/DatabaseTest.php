@@ -4,8 +4,8 @@ namespace AideTravaux\CITE\Tests\Database;
 
 use PHPUnit\Framework\TestCase;
 use AideTravaux\CITE\Database\Database;
-use AideTravaux\CITE\Database\DBInterface;
-use AideTravaux\CITE\Database\DBTrait;
+use AideTravaux\CITE\Database\DatabaseInterface;
+use AideTravaux\CITE\Database\DatabaseTrait;
 
 class DatabaseTest extends TestCase
 {
@@ -20,8 +20,8 @@ class DatabaseTest extends TestCase
     public function testClass($class)
     {
         $this->assertTrue(\class_exists($class));
-        $this->assertTrue(\in_array(DBInterface::class, \class_implements($class)));
-        $this->assertTrue(\in_array(DBTrait::class, \class_uses($class)));
+        $this->assertTrue(\in_array(DatabaseInterface::class, \class_implements($class)));
+        $this->assertTrue(\in_array(DatabaseTrait::class, \class_uses($class)));
     }
 
     /**

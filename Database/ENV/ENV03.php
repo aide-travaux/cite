@@ -4,13 +4,13 @@ namespace AideTravaux\CITE\Database\ENV;
 
 use AideTravaux\CITE\CITE;
 use AideTravaux\CITE\Data\Entries;
-use AideTravaux\CITE\Database\DBInterface;
-use AideTravaux\CITE\Database\DBTrait;
+use AideTravaux\CITE\Database\DatabaseInterface;
+use AideTravaux\CITE\Database\DatabaseTrait;
 use AideTravaux\CITE\Model\DataInterface;
 
-abstract class ENV03 implements DBInterface
+abstract class ENV03 implements DatabaseInterface
 {
-    use DBTrait;
+    use DatabaseTrait;
     
     /**
      * @property
