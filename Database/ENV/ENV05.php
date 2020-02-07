@@ -27,7 +27,7 @@ abstract class ENV05 implements DatabaseInterface
      */
     public static function getMontant(DataInterface $model): float
     {
-        return (float) self::getMontantForfaitaire($model) * $model->getNombreEquipement();
+        return (float) self::getMontantForfaitaire($model) * $model->getNombreFenetres();
     }
 
     /**
