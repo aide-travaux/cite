@@ -15,7 +15,7 @@ abstract class Helper
     public static function getPlafondRessources(float $quotientFamilial): float
     {
         $ceiling = 27706;
-        $ceiling += \max( \floor(\min( $quotientFamilial - 1, 1 ) / 0.25) * (8209 / 2), 0);
+        $ceiling += \max( \floor(\min( $quotientFamilial - 1, 2 ) / 0.25) * (8209 / 2), 0);
         $ceiling += \max( \floor( ($quotientFamilial - 3) / 0.25) * (6157 / 2), 0);
 
         return (float) $ceiling;
